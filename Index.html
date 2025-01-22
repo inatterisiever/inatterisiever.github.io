@@ -1,1 +1,50 @@
-inatterisiever
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inatterisiever</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .clickable {
+            cursor: pointer;
+            font-size: 24px;
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Define the animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+
+        /* Add the animation class */
+        .animated {
+            animation: pulse 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <span class="clickable" onclick="handleClick()">inatterisiever</span>
+
+    <script>
+        function handleClick() {
+            const word = document.querySelector('.clickable');
+            word.classList.add('animated');
+
+            // Remove the animation class after the animation finishes
+            setTimeout(() => word.classList.remove('animated'), 600);
+        }
+    </script>
+</body>
+</html>
