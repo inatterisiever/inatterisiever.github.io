@@ -1,3 +1,35 @@
-<img id="img1" src="https://raw.githubusercontent.com/inatterisiever/inatterisiever.github.io/refs/heads/main/mini/Untitled241_20250203150200.png"/>
-<img id="img2" src="img2.png"/>
-<img id="img3" src="img3.png"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TT</title>
+    <style>
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: auto;
+        }
+
+        .image-container img {
+            position: absolute;
+            width: 100%; 
+            height: auto;
+        }
+
+        #img1 {
+            z-index: 2; 
+        }
+
+        #img2 {
+            z-index: 1; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="img2" src="https://raw.githubusercontent.com/inatterisiever/inatterisiever.github.io/refs/heads/main/mini/Untitled241_20250203150200.png" alt="Background Image">
+        <img id="img1" src="https://raw.githubusercontent.com/inatterisiever/inatterisiever.github.io/refs/heads/main/mini/Untitled241_20250203150200.png" alt="Foreground Image">
+    </div>
+</body>
+</html>
